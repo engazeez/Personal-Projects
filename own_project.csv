@@ -1,0 +1,20 @@
+No of Devices;Floor Name;Temperature Degree;Room;Lab Name
+6;GF;28.3;1;Blood Bank
+5;GF;27.55;2;Blood Bank
+4;GF;28.42;3;Blood Bank
+5;GF;26.81;4;Blood Bank
+3;GF;25.6;5;Blood Bank
+6;GF;28.07;1;Nucleic Acid Testing
+4;FF;28.24;1;Polymerase Chain Reaction
+7;FF;29.15;2;Polymerase Chain Reaction
+5;FF;28.29;3;Polymerase Chain Reaction
+5;FF;27.65;4;Polymerase Chain Reaction
+3;FF;24.35;5;Polymerase Chain Reaction
+3;FF;26.93;6;Polymerase Chain Reaction
+8;FF;27.04;1;Serology
+2;FF;26.06;1;immunology
+6;FF;23.12;1;Water chemistry
+5;FF;26.06;1;Microbiology
+2;FF;22.18;1;Parasites
+3;FF;24.78;1;Hematology
+5;FF;26.34;1;Chemistry
