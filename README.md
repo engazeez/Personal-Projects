@@ -64,6 +64,6 @@ Describing Statistics for Categorical and Numerical Columns. The Average, Midd
 - The Temperature Degrees average is about 26.42 C with Efficiency Rate of 54.24%, this refers to a Bad Rate. 
 
 # Note
-There two files in this reposity
+There are two files in this reposity
 - Jupyter Notebook: step by step for all information I mentioned up
 - Python Script: you can run this script then it will interactes with you and appear some instruction to get the information by 1 or 0
