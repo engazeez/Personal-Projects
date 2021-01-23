@@ -45,7 +45,7 @@ Calculating Efficiency of the Internal Temperature Degrees for Medical Laborator
 - One Temperature Degree Equates 10 percent from Efficiency 
     `one_deg = 10 %` 
 - Actual Efficiency percent
-    `actual_eff = ideal_eff - (actual_temp_deg -ideal_temp_deg) * one_deg`
+    $ actual_eff = ideal_eff - (actual_temp_deg -ideal_temp_deg) * one_deg $
 - Breakdown Temperatur Degree
     `Break_temp_deg = ideal_temp_deg + 10 = 22 + 10 = 32 C`
 
