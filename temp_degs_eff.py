@@ -1,3 +1,4 @@
+## 
 """
 Created on Fri Sep  4 21:08:12 2020
 
@@ -7,9 +8,9 @@ This program asks the user to enter a list for Temperature Degrees as inputs,
 then calculates the Efficiency Rate for each Temperature Degree and assesses 
 each Degree according to its Rate as Good or Bad. After that, it displays some 
 statistical information such as count, mean, standard deviation, menimum, 
-and maximum values. Finally, it shows some graphs that appear the relation between 
+and maximum values. Finally, it shows some graphs that appear the relationship between 
 the independent variable 'Temperature Degree' and  the dependent variable 
-'Efficiency Rate', and how much the percent of Bad and Good Rates.
+'Efficiency Rate', and how many percent of Bad and Good Rates.
 
 """
 
@@ -171,7 +172,7 @@ class TemperatureDegreeEfficiency:
                     x=X, 
                     y=Y, 
                     hue='Quality',
-                    scale=0.6, 
+                    scale=0.8, 
                     color='b', 
                     palette=['red','blue']
                      )
@@ -214,12 +215,23 @@ def evaluate_input():
     
     """
     Order from user to enter a list of temperature degrees n the range from 22 to 32 seperated with ','
-    then evaluated if it pass conditions return to user's input otherwise display message and return first line of loop. 
+    then evaluated if it pass conditions return to user's input otherwise display message and 
+    return first line of loop. 
     """
+    
     temp_deg = []
     obj = None
-    instruction = '''Enter LIST of temperature degrees seprating by commam ',' in the range from 22 to 32 such as [ 22.5, 26 ] or type < temp_degs > for run programm with default temperature degrees or type < 0 > for exit'''
-    message = '''< {0} > is not valid. Should enter list of integer or float numbers seperate by comma ',' in range 22 to 32'''
+    
+    instruction = '''
+    Enter LIST of temperature degrees seprating by commam ',' in the range from 22 to 32 
+    such as [ 22.5, 26 ] or type < temp_degs > for run programm with default temperature degrees or 
+    type < 0 > for exit
+    '''
+    
+    message = '''
+    < {0} > is not valid. Should enter a list of integer or float numbers seperate by comma ',' in range 22 to 32
+    '''
+    
     print(instruction)
     cond = True
     
@@ -232,6 +244,7 @@ def evaluate_input():
     while cond:
         # take temperature degrees from user as inputs
         user = input('>>> ')
+        
         # if user equal 0 go out 
         if user == '0':
             break
@@ -253,6 +266,7 @@ def evaluate_input():
                 # if not raise exception 
                 else:
                     raise
+                    
                 # if index of obj at the last value go out from while loop
                 if number == obj[-1]:
                     cond = False
@@ -286,7 +300,9 @@ def run_program():
     while True:
         
         #ask user if he want to calculate Efficiency rate type 1 or 0 for exit
-        message = 'Do you want to calculate the Efficiency rate for each Temperature Degree. Type < 1 > for continue or < 0 > for exit'
+        message = 'Do you want to calculate the Efficiency rate for each Temperature Degree. \
+        Type < 1 > for continue or < 0 > for exit'
+        
         print(message, '\n')
         user = input('>>> ')
         
@@ -301,14 +317,16 @@ def run_program():
         
         # otherwise print error and return first line of the loop
         else:
-            print('Invalid value { 0 }'.format(user))
-            print(message)
+            print(f'Invalid value {user}')
+            #print(message)
        
         
     while True:
         
         #ask user if he want to calculate Quality types type 1 or 0 for exit
-        message = 'Do you want to calculate the Quality Types for each Temperature Degree. Type < 1 > for continue or < 0 > for exit'
+        message = 'Do you want to calculate the Quality Types for each Temperature Degree. \
+        Type < 1 > for continue or < 0 > for exit'
+        
         print(message, '\n')
         user = input('>>> ')
         
@@ -323,8 +341,8 @@ def run_program():
         
         # otherwise print error and return first line of the loop       
         else:
-            print('Invalid value { 0 }'.format(user))
-            print(message)
+            print(f'Invalid value {user}')
+            #print(message)
                 
     while True:
         
@@ -335,7 +353,10 @@ def run_program():
         
         # if user type 1 create data frame for Temperature Degrees, Efficiency Rates and Quality Types then break the loop
         if user == '1':
-            print('Data Frame for Temperature Degrees, Efficiency Rates and Quality Types: ', reglab._data_frame(), sep='\n', end='\n\n')
+            print(
+                'Data Frame for Temperature Degrees, Efficiency Rates and Quality Types: ', 
+                reglab._data_frame(), sep='\n', end='\n\n')
+            
             break
         
         # if user type 0 or space return to leav_comment function for exit
@@ -344,8 +365,8 @@ def run_program():
         
         # otherwise print error and return first line of the loop 
         else:
-            print('Invalid value { 0 }'.format(user))
-            print(message)
+            print(f'Invalid value {user}')
+            #print(message)
          
     while True:
         
@@ -365,8 +386,8 @@ def run_program():
         
         # otherwise print error and return first line of the loop 
         else:
-            print('Invalid value { 0 }'.format(user))
-            print(message)
+            print(f'Invalid value {user}')
+            #print(message)
              
     while True:
         
@@ -386,8 +407,8 @@ def run_program():
         
         # otherwise print error and return first line of the loop        
         else:
-            print('Invalid value { 0 }'.format(user))
-            print(message)
+            print(f'Invalid value {user}')
+            #print(message)
     
     while True:
         
@@ -407,15 +428,18 @@ def run_program():
         
         # otherwise print error and return first line of the loop        
         else:
-            print('Invalid value { 0 }'.format(user))
-            print(message)
-             
+            print(f'Invalid value {user}')
+            #print(message)
+    
+    message = 'Do you want to see some graphs.'
+    print(message)
+    
     while True:
         
         # print messages and graphs as instructions and aks user for type a number of graph 
-        message = 'Do you want to see some graphs.'
+        
         message1 = 'Type the graph number that you would like to see or < all > for all graphs or < 0 > for exit'
-        print(message, message1, sep='\n\n', end='\n\n')
+        print(message1, sep='\n', end='\n')
 
         graph1 = 'Relation between Temperature Degrees and Efficiency Rates: 1'
         graph2 = 'Good and Bad Quality Destribution: 2'
@@ -443,8 +467,8 @@ def run_program():
         
         # otherwise print error and return first line of the loop        
         else:
-            print('Invalid value { 0 }'.format(user))
-            print(message)
+            print(f'Invalid value {user}')
+            #print(message)
         
 def leave_comment():
     
@@ -452,48 +476,14 @@ def leave_comment():
     message = 'Before exit, Leave a comment or type < 0 > for exit: '
     user = input(message)
 
+    global comment
+    
     comment = user
     
     # return message
     message = 'Thank you for your use of the program.'
-    return message
+    print(message)
 
 if __name__ == '__main__':
     run_program()
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    
